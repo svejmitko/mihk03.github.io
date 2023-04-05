@@ -1,0 +1,186 @@
+{
+    "asset": {
+        "copyright": "2020 (c) Adobe Inc.",
+        "generator": "Adobe Dimension - 381cf499e4c74d2ada5dde7ebe90541f51590aae",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 46159,
+            "type": "VEC3",
+            "max": [
+                0.08225677907466889,
+                0.08096998929977417,
+                0.04646516591310501
+            ],
+            "min": [
+                -0.0760958343744278,
+                -0.07532692700624466,
+                0.016423380002379419
+            ]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 46159,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 46159,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5125,
+            "count": 186240,
+            "type": "SCALAR",
+            "max": [
+                46158.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 553908,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 553908,
+            "byteLength": 553908,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1107816,
+            "byteLength": 369272,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1477088,
+            "byteLength": 744960,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 2222048,
+            "uri": "plate_binary.bin"
+        }
+    ],
+    "cameras": [
+        {
+            "perspective": {
+                "znear": 0.000010000000656873454,
+                "yfov": 0.6024156808853149,
+                "zfar": 2.0,
+                "aspectRatio": 1.3333333730697632
+            },
+            "type": "perspective",
+            "name": "render_camera"
+        }
+    ],
+    "images": [
+        {
+            "name": "Textured_mesh_2",
+            "uri": "plate_images\\Textured_mesh_2.jpg",
+            "mimeType": "image/jpeg"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.6000000238418579
+            },
+            "name": "Textured_mesh_2",
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Group_Global",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "translation": [
+                0.4537911117076874,
+                0.29999998211860659,
+                0.5607404708862305
+            ],
+            "rotation": [
+                -0.12059047073125839,
+                0.379409521818161,
+                0.04995020851492882,
+                0.9159756302833557
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                0.9999999403953552
+            ],
+            "camera": 0,
+            "name": "render_camera_n3d"
+        },
+        {
+            "translation": [
+                -0.0030804728157818319,
+                -0.01747262291610241,
+                0.0033393572084605695
+            ],
+            "rotation": [
+                -0.713250458240509,
+                -4.384452307991602e-17,
+                5.024104775871313e-15,
+                0.7009092569351196
+            ],
+            "mesh": 0,
+            "name": "Group_Global"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0,
+                1
+            ],
+            "name": "scene"
+        }
+    ],
+    "textures": [
+        {
+            "name": "Textured_mesh_2::baseColor::image",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "scene": 0
+}
