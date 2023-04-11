@@ -5933,12 +5933,36 @@ ARjs.Source.prototype._initSourceWebcam = function(onReady, onError) {
         }
       }
     }
-    var backCam2 = devices.filter(d=>{
-      return d.label && d.label == "camera2 0, facing back";
-  })
-  if (backCam2.length) {
-      userMediaConstraints.video.deviceId = backCam2[0].deviceId
-  }
+    // Check for available cameras
+navigator.mediaDevices.enumerateDevices()
+.then(devices => {
+  devices.forEach(device => {
+    if (device.kind === 'videoinput') {
+      // Use back camera if available
+      if (device.label.toLowerCase().includes('back')) {
+        userMediaConstraints.video.deviceId = { exact: device.deviceId };
+      }
+    }
+  });
+})
+.catch(error => {
+  console.error(error);
+});
+
+// Pass userMediaConstraints to arToolkitSource
+var arToolkitSource = new THREEx.ArToolkitSource({
+  sourceType : 'webcam',
+  sourceWidth: 640,
+  sourceHeight: 480,
+  displayWidth: window.innerWidth,
+  displayHeight: window.innerHeight,
+  facingMode: 'environment',
+  cameraParametersUrl: 'data/camera_para.dat',
+  detectionMode: 'mono',
+  debug: false,
+  userData: userMediaConstraints
+});
+
     // get a device which satisfy the constraints
     navigator.mediaDevices.getUserMedia(userMediaConstraints).then(function success(stream) {
       // set the .src of the domElement
